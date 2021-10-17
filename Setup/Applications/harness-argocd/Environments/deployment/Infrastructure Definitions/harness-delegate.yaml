@@ -1,0 +1,22 @@
+harnessApiVersion: '1.0'
+type: INFRA_DEFINITION
+cloudProviderType: AWS
+deploymentType: AWS_LAMBDA
+infrastructure:
+- type: AWS_AWS_LAMBDA
+  cloudProviderName: Amazon Web Services
+  iamRole: arn:aws:iam::635631106526:role/eksctl-maintask-cluster-ServiceRole-1S7VC3ZZVQO6F
+  region: ap-south-1
+  securityGroupIds:
+  - sg-03d71d08a70515121
+  - sg-05cded310cd623782
+  - sg-0703e0f592a27d9a6
+  - sg-0eb17a3cd8f6f0a30
+  subnetIds:
+  - subnet-0d5e2e0856d2287bc
+  - subnet-089dc5020e86604b5
+  - subnet-04fdc91d9e1ca75a8
+  - subnet-0c16f0759ebe43263
+  - subnet-0ec6d6a5f5d03604f
+  - subnet-00b6000cc3d251183
+  vpcId: vpc-0688efa0efbee51bb
