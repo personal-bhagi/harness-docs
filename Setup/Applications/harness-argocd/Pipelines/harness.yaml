@@ -7,7 +7,6 @@ pipelineStages:
   properties:
     userGroups:
     - Non-Production Support
-    variables: null
     stageName: STAGE 1
     timeoutMillis: 86400000
     approvalStateType: USER_GROUP
