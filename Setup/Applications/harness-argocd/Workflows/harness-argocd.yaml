@@ -20,10 +20,28 @@ phases:
     steps:
     - type: ARTIFACT_COLLECTION
       name: Artifact Collection
+    - type: ARTIFACT_COLLECTION
+      name: Artifact Collection_2
+      properties:
+        buildNo: review
+        regex: false
+        templateExpressions:
+        - expression: ${ArtifactSource}
+          fieldName: artifactStreamId
+          metadata:
+            entityType: ARTIFACT_STREAM
+            relatedField: ''
+        timeoutMillis: 300000
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
     stepsInParallel: false
   provisionNodes: false
   statefulSet: false
-templatized: false
+templatized: true
+userVariables:
+- type: ENTITY
+  description: Variable for Artifact source configuration entity in Artifact Collection_2
+  fixed: false
+  mandatory: true
+  name: ArtifactSource
